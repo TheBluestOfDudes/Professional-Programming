@@ -1,5 +1,6 @@
 # Team members
 - Abubakar Ahmed Yusuf
+- Vegard Skaansar
 - Odd Arne Hagelund (Not part of professional programming)
 # Group discussion
 
