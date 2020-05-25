@@ -45,3 +45,21 @@ Due to group members' general inexpirience with working with branches, we encoun
 
 ### __Git__
 In the issue tracker we defined a series of hastags that corresponded to a theme for commits. Commits to master that had to do with database functionality, would all be prefixed by the relevant hashtag, and commits had to do with testing would be prefixed by another. This removed the confusion and headaches that came with trying to use branches, while still giving us control of whatwas being developed and and what was being merged in.
+
+## __Coding style and commenting__
+The guide can be found here [here](styleguide.md)
+
+## __Use of libraries__
+When it came to usage of libraries we apporached it from the point of view of having as few external dependencies as possible, however we also had to identify when this was inpractical. For instance with security protocols such as hashing of passwords, using of libraries was natural as they have in all liklihood been rigorously tested to work properly. Using MySQL Connector to connect our server to our database, and using React.js to build our frontend application all make these essential tasks much more stream lined and are tried and tested by many already. For things that were not absolutely vital however, we prioritized implementing the functionality ourselves to maintain the most amount of individual reliablity for our system.
+
+Our project was spesifically to develop a prototype for a wider system that could be further polished into the future, and then eventually launched commercially. This helped guide our choices of libraries, as we wanted to avoid the application being undeployable due to lisenceing issues with third party dependencies. 
+
+## __Code review__
+We chose to do this project using the incremental-sequential development model. Each increment consisted of a three week development period wherein the first two weeks was for impleneting the functionality for that particular increment, and the final week was for peer reviewing each others' work.
+
+During these reviews, group members would look through each others' codes and look out for any errors in coding style, syntax, efficency and logic. Feedback would be given and then improvements would be made. 
+
+## __Individual review__
+[Abu](abu.md)
+
+[Vegard](vegard.md)
