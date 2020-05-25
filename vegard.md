@@ -203,3 +203,7 @@ public class DB {
 }
 ```
 Now when connection get closed we check if the connection is closed or not and then depending on the answer make a new connection to the database. The problem got solved by this change. Now we did not have 50 hanging database connection in our application and prevented som crashes we had gotten because of this reason.
+
+## Professionalism
+
+I think in the profesionalism part i have gotten better while we have been doing the bachelor thesis. Example of that is that i started testing function and class immediately after making them, instead of doing it later. This is a way better for both my group and myself. This is because tests make a better understanding of how a function may work, instead of only reading the code. At the same time you have a test incase it breaks later and you know it have worked before. In general it has been a good process and i would carry this new knowlegde with me to the next projects i will work with other people. Other aspect i have tried to give my group members help as much as i can with inviting them to discord calls to discuess different decitions we wanted to do. 
