@@ -14,13 +14,13 @@ There will only be line breaks between classes, methods, loops, if statements, s
 
 ### __Example__
 
-```
+```java
 package com.KopifriOnsdag.bachelor;
 
 import org.mindrot.jbcrypt.BCrypt;
 /**
- *  <h1>Hashing</h1>
- *  <p>This class handles encrypting/decrypting of passwords through
+ * <h1>Hashing</h1>
+ * <p>This class handles encrypting/decrypting of passwords through
  * hashing.</p>
  */
 public class Hashing {

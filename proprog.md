@@ -60,6 +60,9 @@ We chose to do this project using the incremental-sequential development model. 
 During these reviews, group members would look through each others' codes and look out for any errors in coding style, syntax, efficency and logic. Feedback would be given and then improvements would be made. 
 
 ## __Individual review__
-[Abu](abu.md)
+[Abubakar Ahmed Yusuf (abubakay)](abu.md)
 
-[Vegard](vegard.md)
+[Vegard Skaansar (vegaskaa)](vegard.md)
+
+## __Repository__
+Our project repository can be found [here](https://github.com/VegardSkaansar/Kopifri-Onsdag). If you cannot access the repository, check if you have accepted the invite to be a collaborator.
