@@ -66,3 +66,10 @@ During these reviews, group members would look through each others' codes and lo
 
 ## __Repository__
 Our project repository can be found [here](https://github.com/VegardSkaansar/Kopifri-Onsdag). If you cannot access the repository, check if you have accepted the invite to be a collaborator.
+
+## __Contact__
+If there are any issues, you can reach either of us on our respective emails.
+
+Vegard: vegaskaa@stud.ntnu.no
+
+Abubakar: abubakay@stud.ntnu.no
