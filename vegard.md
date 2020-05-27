@@ -103,7 +103,7 @@ Code over we can look at an example i mean is good code. The reason for this is 
         return send;
     }
 ```
-Its several reason i think this code is bad in general. This code will be refactored in the future. The first i want to say that i dont need to have two sql statements here but combined them to one sql stament and use an inner join to check get the same result. In the teory i could half the code in this function. In this code we will loop through all the codes and do a lot of database calls that is not neccessary, that will both eat resources and performance to fix this i would use the inner join and we would only need to run one sql query to the database to get the same information. This way would been way better because going when the api gets bigger the reduced datbase calls can make other request go faster. In general if this was going out to be deployed on any school the e.printstacktrace should be deleted and changed to a java logging class. With this logging class we can restrict what messages that are getting sendt or not to the console.
+Its several reason i think this code is bad in general. This code will be refactored in the future. The first i want to say that i dont need to have two sql statements here but combined them to one sql stament and use an inner join to check get the same result. In the teory i could half the code in this function. In this code we will loop through all the codes and do a lot of database calls that is not neccessary, that will both eat resources and performance to fix this i would use the inner join and we would only need to run one sql query to the database to get the same information. This way would been way better because going when the api gets bigger the reduced datbase calls can make other request go faster. In general if this was going out to be deployed on any school the e.printstacktrace should be deleted and changed to a java logging class. With this logging class we can restrict what messages that are getting sendt to the console. Instead of having the 1 and 2 in setString and setInt, we could refactor the code to give us an constant instead like ROW1, so when someone that have never seen this type of code can better understand this function.
 
 # __Refactored code__
 ## Before
@@ -149,7 +149,7 @@ public class DB {
     }
 }
 ```
-The reason we had to refactor is this code was because the behaviour that was intended did not happend. Whenever we was communication to the database to quries as seen in the bad database example. We want to close the connection to the database so it doesnt hang from earlier connections. So we had to close the connection as seen above. That means in ths current version of the code it would been closed for a new request to the database, and therefore we had to refactor the code as seen below.
+The reason we had to refactor is this code was because the behaviour that was intended did not happend. Whenever we was communication to the database to queries as seen in the bad database example. We want to close the connection to the database so it doesnt hang from earlier connections. So we had to close the connection as seen above. That means in ths current version of the code it would been closed for a new request to the database, and therefore we had to refactor the code as seen below.
 
 ## After
 ```java
