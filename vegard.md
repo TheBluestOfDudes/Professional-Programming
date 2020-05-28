@@ -167,42 +167,26 @@ public class DB {
     private static final String USER = "user";
     private static final String PASS = "test";
     // Database connection
-    private static Connection connection = null;
-
-    /***
-     * Constructor opens connection to the MySQL database
-     * 
-     * @throws Exception Exception if the connection to the database fails
-     */
-    public DB() {
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/db?" +
-                "user="+USER+"&password="+PASS+"&serverTimezone=Europe/Oslo");
-            } catch (SQLException | ClassNotFoundException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            }
-    }
 
     /***
      * Method that returns the database connection
      * @return The connection to the database
      */
     public Connection getConnection(){
+        Connection connection = null;
         try {
-            if(connection.isClosed()) {
-                connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/db?" +
-                "user="+USER+"&password="+PASS+"&serverTimezone=Europe/Oslo");
-            }
-        } catch(SQLException e) {
-            e.printStackTrace();
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            connection = DriverManager.getConnection("jdbc:mysql://mysql:3306/db?" +
+            "user="+USER+"&password="+PASS+"&serverTimezone=Europe/Oslo");
+        } catch (SQLException | ClassNotFoundException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
         }
         return connection;
     }
 }
 ```
-Now when connection get closed we check if the connection is closed or not and then depending on the answer make a new connection to the database. The problem got solved by this change. Now we did not have 50 hanging database connection in our application and prevented som crashes we had gotten because of this reason.
+Now when connection get closed we check if the connection is closed or not and then depending on the answer make a new connection to the database. The problem got solved by this change. Now we did not have 50 hanging database connection in our application and prevented som crashes we had gotten because of this reason. Of course its bad with user ans passsword in this file, but this is a local version of the application with a demo database with no important information in it.
 
 ## Professionalism
 
